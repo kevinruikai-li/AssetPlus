@@ -1,0 +1,48 @@
+class AssetPlus {
+    public void reinitialize() {
+        User.reinitializeUniqueEmail(getManager(), getEmployees(), getGuests());
+        MaintenanceTicket.reinitializeUniqueId(getMaintenanceTickets());
+        SpecificAsset.reinitializeUniqueAssetNumber(getSpecificAssets());
+        AssetType.reinitializeUniqueName(getAssetTypes());
+    }
+}
+
+class User {
+    public static void reinitializeUniqueEmail(Manager manager, List<Employee> employees, List<Guest> guests) {
+        usersByEmail.clear();
+        usersByEmail.put(manager.getEmail(), manager);
+        for (var employee: employees) {
+            usersByEmail.put(employee.getEmail(), employee);
+        }
+        for (var guest: guests) {
+            usersByEmail.put(guest.getEmail(), guest);
+        }
+    }
+}
+
+class MaintenanceTicket {
+    public static void reinitializeUniqueId(List<MaintenanceTicket> tickets) {
+        maintenanceticketsById.clear();
+        for (var ticket: tickets) {
+            maintenanceticketsById.put(ticket.getId(), ticket);
+        }
+    }
+}
+
+class SpecificAsset {
+    public static void reinitializeUniqueAssetNumber(List<SpecificAsset> specificAssets) {
+        specificassetsByAssetNumber.clear();
+        for (var specificAsset: specificAssets) {
+            specificassetsByAssetNumber.put(specificAsset.getAssetNumber(), specificAsset);
+        }
+    }
+}
+
+class AssetType {
+    public static void reinitializeUniqueName(List<AssetType> assetTypes) {
+        assettypesByName.clear();
+        for (var assetType: assetTypes) {
+            assettypesByName.put(assetType.getName(), assetType);
+        }
+    }
+}
