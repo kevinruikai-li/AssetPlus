@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="400.0" prefHeight="400.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefHeight="435.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Users">
+            <content>
+              <fx:include source="pages/UsersPage.fxml" />
+            </content>
+          </Tab>
+          <Tab text="Assets">
+            <content>
+              <fx:include source="pages/AssetsPage.fxml" />
+            </content>
+          </Tab>
+          <Tab text="Asset Types">
+            <content>
+              <fx:include source="pages/AssetTypePage.fxml" />
+            </content>
+          </Tab>
+         <Tab text="Maintenance">
+            <content>
+               <fx:include source="pages/MaintenancePage.fxml" />
+            </content>
+         </Tab>
+         <Tab text="Assignments">
+            <content>
+               <fx:include source="pages/AssignmentPage.fxml" />
+            </content>
+         </Tab>
+        </tabs>
+      </TabPane>
+      <Separator prefWidth="200.0" />
+      <fx:include maxWidth="1.79E308" source="pages/ListView.fxml" />
+   </children>
+</VBox>
