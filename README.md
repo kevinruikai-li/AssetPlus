@@ -1,10 +1,8 @@
 # :hotel::heavy_plus_sign: ECSE223 AssetPlus Project: Team P1
 
-_(Edit this file as needed, then remove this sentence)._
-
 ## Project Overview
 
-_Provide a one-sentence overview of your project here._
+This is an application to manage hotel assets and maintenance tickets for any issues within the hotel.
 
 For more information about the AssetPlus application, please consult the [wiki](../../wiki).
 
